@@ -1,3 +1,4 @@
+#!/bin/bash
 #/*
 # * ----------------------------------------------------------------------------
 # * "THE BEER-WARE LICENSE" (Revision 42):
@@ -12,7 +13,7 @@ playing () {
 }
 
 covid19 () {
-	curl https://corona-stats.online/australia\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
+	curl https://corona-stats.online/australia\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
 }
 
 memory (){
@@ -49,6 +50,6 @@ weather() {
 
 while true
 do
-	xsetroot -name " $(playing)   $(covid19)    $(memory)    $(drive)    $(cpu_temp)    $(volume)%    $(weather)    $(print_date)"
+	xsetroot -name "$(covid19)   $(memory)    $(drive)    $(volume)    $(weather)    $(print_date)"
 	sleep 1s
 done
