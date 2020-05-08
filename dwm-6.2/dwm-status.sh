@@ -13,7 +13,7 @@ playing () {
 }
 
 covid19 () {
-	curl https://corona-stats.online/australia\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
+	curl https://corona-stats.online/russia\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
 }
 
 memory (){
