@@ -1,1 +1,1 @@
-/home/vitalbuggy/.screenlayout/fix_monitors.sh
+/home/vitalbuggy/.screenlayout/fix_monitors.sh && nitrogen --restore
