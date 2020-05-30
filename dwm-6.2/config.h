@@ -10,7 +10,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=11", "FontAwesome:size=12" };
+static const char *fonts[]          = { "monospace:size=11", "Font Awesome 5 Free Solid:size=11" , "Font Awesome 5 Free Regular:size=11", "Font Awesome 5 Brands:size=11"};
 static const char dmenufont[]       = "monospace:size=11";
 static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#32302f";
@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -71,7 +71,7 @@ static const char *termcmd[]  = { "st", NULL };
 #include "shiftview.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          SHCMD("rofi -show drun") },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_q,      shiftview,      {.i = -1} },
 	{ MODKEY,                       XK_w,      shiftview,      {.i = +1} },
